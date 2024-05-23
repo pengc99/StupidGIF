@@ -2,11 +2,14 @@
 
 A Windows Batch File to generate animated GIFs from videos using FFmpeg
 
-Place the FFmpeg binary in the same directory as the batch file. Drag a video file on top of the batch file to make a GIF!
+To use this batch file:
+1. Go to the [FFmpeg Windows Releases page](https://ffmpeg.org/download.html#build-windows) to download a binary.
+2. Place the ```ffmpeg.exe``` binary in the same directory as the batch file. 
+3. Drag a video file on top of the batch file to make a GIF!
 
 This script uses several external scripts and resources:
-* [https://github.com/videojs/video.js](https://engineering.giphy.com/how-to-make-gifs-with-ffmpeg/)
 * http://ffmpeg.org/
+* https://engineering.giphy.com/how-to-make-gifs-with-ffmpeg/
 
 ***
 
