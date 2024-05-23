@@ -54,18 +54,18 @@ ECHO.
 SET /P M=: 
 IF %M%==1 (
 	SET Framerate=5
-	GOTO ffmpeg )
+	GOTO FFmpeg )
 IF %M%==2 (
 	SET Framerate=15
-	GOTO ffmpeg )
+	GOTO FFmpeg )
 IF %M%==3 (
 	SET Framerate=30
-	GOTO ffmpeg )
+	GOTO FFmpeg )
 IF %M%==4 (
 	GOTO :EOF )
 GOTO SelectFramerate
 
-:ffmpeg
+:FFmpeg
 CLS
 "%BasePath%ffmpeg.exe" -i "%~1" -filter_complex "[0:v] fps=%Framerate%,scale=-1:%Resolution%,setsar=1:1,split [a][b];[a] palettegen=stats_mode=single [p];[b][p] paletteuse=new=1" "%OutputFileName%.gif" -y
 IF %ERRORLEVEL% NEQ 0 PAUSE
